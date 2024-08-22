@@ -1,0 +1,6 @@
+pip install transformers
+from transformers import pipeline
+
+classifier = pipeline('sentiment-analysis')
+result = classifier('I love using Hugging Face!')[0]
+print(f"Label: {result['label']}, with score: {result['score']:.4f}")
